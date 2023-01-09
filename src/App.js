@@ -1,7 +1,25 @@
 import logo from './logo.svg';
+import Props1 from './Props1';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import TodoList from './components/TodoList';
 import './App.css';
+import {useState} from 'react'
 
 function App() {
+
+  const [count, setCount] = useState(0)
+
+  const plus=()=>{
+    setCount(count +1)
+
+  }
+  const minus=()=>{
+    setCount(count -1)
+
+  }
+  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +35,17 @@ function App() {
         >
           Learn React
         </a>
+        {count}
+        <button onClick={plus}>plus</button>
+        <button onClick={minus}>minus</button>
       </header>
+      <div>
+        <Navbar />
+     <TodoList />
+      </div>
+      <footer>
+hello
+      </footer>
     </div>
   );
 }
