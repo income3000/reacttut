@@ -27,7 +27,7 @@ function TodoList() {
       setItems(newArray)
     }
   return (
-    <div>
+    <div className='todo'>
       
       <h1>TodoList</h1>
    <input 
